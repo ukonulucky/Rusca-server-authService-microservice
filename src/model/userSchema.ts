@@ -24,8 +24,7 @@ const userSchema = new mongoose.Schema<userSchemaType>({
   },
   password: {
     type: String,
-    required: true,
-    select: false
+    required: true
   },
   image: {
       type: Object,
@@ -86,7 +85,11 @@ userSchema.pre("save", async function (next) {
 })
 
 userSchema.methods.comparePassword = async function (userPassword: string) { 
-   try {
+  try {
+    if (!userPassword || userPassword.length === 0) {
+      throw new Error("Password must be provided");
+    }
+    console.log("db password", this.password)
     return await argon2.verify(this.password,userPassword )
    } catch (error: any) {
     throw new Error(error)

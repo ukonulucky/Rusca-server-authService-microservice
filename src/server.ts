@@ -18,9 +18,15 @@ const PORT = process.env.PORT || 5000
 console.log("environment variables", process.env.REDIS_URL)
 
 
+
+const corsOptions = {
+    origin:"*",
+    methods: ["GET","HEAD","PUT","PATCH","POST","DELETE"],
+    credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+}
 // middleware 
 app.use(helmet())
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // setting up a redis client
@@ -49,11 +55,7 @@ app.use(async (req, res, next) => {
 })
 
 
-const corsOptions = {
-    origin:"*",
-    methods: ["GET","HEAD","PUT","PATCH","POST","DELETE"],
-    credentials: true, // Enable credentials (cookies, authorization headers, etc.)
-}
+
 
 app.engine("hbs", engine({
     extname: '.hbs',

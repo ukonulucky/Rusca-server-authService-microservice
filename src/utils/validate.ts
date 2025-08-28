@@ -3,18 +3,31 @@ import { changePasswordOTPVerificationType, changePasswordType, userForgotPasswo
 
 
 export const registerValidation = (data: userRegisterType) => { 
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
 
     const schema = Joi.object({
-        userName: Joi.string().min(3).max(15).required(),
+        fullName: Joi.string().min(3).max(15).required(),
         email: Joi.string().email().required(),
-        password:Joi.string().min(5).max(15).required()
+        password:Joi.string().min(5).max(15).required(),
+        phone:Joi.string()
+        .pattern(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/)
+        .message("Phone number must be a valid UK number, e.g., +447123456789 or 07123456789")
+        .required()
     })
 
     return schema.validate(data)
 
 }
 export const loginValidation = (data: userLoginType) => { 
-
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
     const schema = Joi.object({
         email: Joi.string().email().required(),
         password: Joi.string().min(5).max(15).required(),
@@ -26,7 +39,12 @@ export const loginValidation = (data: userLoginType) => {
 
 }
 
-export const forgotPasswordValidation = (data:userForgotPasswordType) => { 
+export const forgotPasswordValidation = (data: userForgotPasswordType) => { 
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
     const schema = Joi.object({
         email: Joi.string().email().required()
     })
@@ -34,7 +52,12 @@ export const forgotPasswordValidation = (data:userForgotPasswordType) => {
     return schema.validate(data)
 }
 
-export const changePasswordValidation = (data:changePasswordType) => { 
+export const changePasswordValidation = (data: changePasswordType) => { 
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
     const schema = Joi.object({
         email: Joi.string().email().required(),
         token: Joi.string().required(),
@@ -44,8 +67,14 @@ export const changePasswordValidation = (data:changePasswordType) => {
     return schema.validate(data)
 }
 
-export const changePasswordOTPVerificationValidation = (data:changePasswordOTPVerificationType) => { 
-    const schema = Joi.object({
+export const changePasswordOTPVerificationValidation = (data: changePasswordOTPVerificationType) => { 
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
+    const schema = Joi
+    .object({
         email: Joi.string().email().required(),
         token: Joi.string().required()
     })

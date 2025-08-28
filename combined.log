@@ -901,3 +901,462 @@
 {"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-25T16:27:23.557Z"}
 {"level":"warn","message":"user logged in successfully","service":"auth-service","timestamp":"2025-08-25T16:27:24.015Z"}
 {"level":"warn","message":"new refresh token schema created for the login controller","service":"auth-service","timestamp":"2025-08-25T16:27:24.078Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:26:51.674Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:26:51.684Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:26:51.700Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:26:52.329Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:26:52.330Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:32:13.155Z"}
+{"level":"info","message":"request from /api/auth/register having a method of GET","service":"auth-service","timestamp":"2025-08-28T01:32:13.215Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:32:51.569Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:32:51.574Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:32:51.581Z"}
+{"level":"error","message":"Registration error Cannot destructure property 'email' of 'req.body' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at registerUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:33:13)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:295:15\n    at processParams (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:582:12)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:291:5)\n    at router.handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:186:3)","timestamp":"2025-08-28T01:32:51.632Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:35:45.154Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:35:45.161Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:35:45.161Z"}
+{"level":"error","message":"Registration error Cannot destructure property 'email' of 'req.body' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at registerUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:33:13)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:295:15\n    at processParams (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:582:12)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:291:5)\n    at router.handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:186:3)","timestamp":"2025-08-28T01:35:45.166Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:35:46.700Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:35:46.706Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:35:46.706Z"}
+{"level":"error","message":"Registration error Cannot destructure property 'email' of 'req.body' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at registerUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:33:13)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:295:15\n    at processParams (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:582:12)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:291:5)\n    at router.handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:186:3)","timestamp":"2025-08-28T01:35:46.708Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:35:59.075Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:35:59.087Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:35:59.092Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:35:59.754Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:35:59.755Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:36:15.400Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:36:15.486Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:36:15.488Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:36:15.963Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:36:15.963Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:36:21.989Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:36:21.998Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:36:22.001Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:36:22.454Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:36:22.455Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:36:29.633Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:36:29.645Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:36:29.646Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:36:30.118Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:36:30.118Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:36:33.631Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:36:33.634Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:36:33.635Z"}
+{"level":"error","message":"Registration error Cannot destructure property 'email' of 'req.body' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at registerUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:33:13)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:295:15\n    at processParams (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:582:12)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:291:5)\n    at router.handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:186:3)","timestamp":"2025-08-28T01:36:33.646Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:36:34.821Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:36:34.822Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:36:34.823Z"}
+{"level":"error","message":"Registration error Cannot destructure property 'email' of 'req.body' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at registerUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:33:13)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/lib/layer.js:152:17)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:295:15\n    at processParams (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:582:12)\n    at next (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:291:5)\n    at router.handle (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/router/index.js:186:3)","timestamp":"2025-08-28T01:36:34.824Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:37:10.937Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:37:10.938Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:37:10.938Z"}
+{"0":"\"","1":"u","10":" ","11":"i","12":"s","13":" ","14":"r","15":"e","16":"q","17":"u","18":"i","19":"r","2":"s","20":"e","21":"d","3":"e","4":"r","5":"N","6":"a","7":"m","8":"e","9":"\"","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:37:10.940Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:25.478Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:25.493Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:25.499Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:43:26.033Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:43:26.033Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:31.927Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:31.938Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:32.016Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:43:32.399Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:43:32.399Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:36.661Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:36.673Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:36.674Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:43:37.131Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:43:37.131Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:47.301Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:47.313Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:47.316Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:43:47.798Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:43:47.799Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:49.917Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:49.928Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:49.933Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:43:52.578Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:43:52.590Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:43:52.591Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:43:53.056Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:43:53.056Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:44:07.411Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:44:07.425Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:44:07.426Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:44:07.868Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:44:07.868Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:44:23.228Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:44:23.342Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:44:23.343Z"}
+{"0":"R","1":"e","10":"d","11":"y","12":" ","13":"c","14":"a","15":"n","16":"n","17":"o","18":"t","19":" ","2":"q","20":"b","21":"e","22":" ","23":"e","24":"m","25":"p","26":"t","27":"y","3":"u","4":"e","5":"s","6":"t","7":" ","8":"b","9":"o","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:44:23.344Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:44:33.811Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:44:33.814Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:44:33.814Z"}
+{"0":"\"","1":"u","10":" ","11":"i","12":"s","13":" ","14":"r","15":"e","16":"q","17":"u","18":"i","19":"r","2":"s","20":"e","21":"d","3":"e","4":"r","5":"N","6":"a","7":"m","8":"e","9":"\"","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:44:33.817Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:47:18.941Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:47:18.969Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:47:18.981Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:47:19.491Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:47:19.491Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:47:31.202Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:47:31.215Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:47:31.217Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:47:31.717Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:47:31.725Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:47:50.660Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:47:50.677Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:47:50.679Z"}
+{"0":"\"","1":"f","10":" ","11":"i","12":"s","13":" ","14":"r","15":"e","16":"q","17":"u","18":"i","19":"r","2":"u","20":"e","21":"d","3":"l","4":"l","5":"N","6":"a","7":"m","8":"e","9":"\"","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:47:50.689Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:48:03.727Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:48:03.729Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:48:03.729Z"}
+{"0":"\"","1":"e","10":"s","11":"t","12":" ","13":"b","14":"e","15":" ","16":"a","17":" ","18":"v","19":"a","2":"m","20":"l","21":"i","22":"d","23":" ","24":"e","25":"m","26":"a","27":"i","28":"l","3":"a","4":"i","5":"l","6":"\"","7":" ","8":"m","9":"u","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:48:03.730Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:48:17.218Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:48:17.221Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:48:17.221Z"}
+{"0":"\"","1":"p","10":" ","11":"i","12":"s","13":" ","14":"r","15":"e","16":"q","17":"u","18":"i","19":"r","2":"a","20":"e","21":"d","3":"s","4":"s","5":"w","6":"o","7":"r","8":"d","9":"\"","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:48:17.223Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:48:30.466Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:48:30.474Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:48:30.474Z"}
+{"_message":"User validation failed","errors":{"phone":{"kind":"required","message":"Path `phone` is required.","name":"ValidatorError","path":"phone","properties":{"message":"Path `phone` is required.","path":"phone","type":"required"}}},"level":"error","message":"Registration error User validation failed: phone: Path `phone` is required.","service":"auth-service","stack":"ValidationError: User validation failed: phone: Path `phone` is required.\n    at model.Document.invalidate (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/document.js:3358:32)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/document.js:3119:17\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/schemaType.js:1410:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-08-28T01:48:30.537Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:49:27.229Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:49:27.238Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:49:27.242Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:49:27.888Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:49:27.889Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:49:49.308Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:49:49.318Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:49:49.319Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:49:49.793Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:49:49.794Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:50:21.705Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:50:21.735Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:50:21.737Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:50:22.209Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:50:22.210Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:51:01.785Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:51:01.808Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:51:01.834Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:51:02.368Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:51:02.368Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:51:17.817Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:51:17.846Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:51:17.847Z"}
+{"0":"\"","1":"p","10":" ","11":"r","12":"e","13":"q","14":"u","15":"i","16":"r","17":"e","18":"d","2":"h","3":"o","4":"n","5":"e","6":"\"","7":" ","8":"i","9":"s","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:51:17.853Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:51:33.993Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:51:34.040Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:51:34.041Z"}
+{"0":"P","1":"h","10":"e","11":"r","12":" ","13":"m","14":"u","15":"s","16":"t","17":" ","18":"b","19":"e","2":"o","20":" ","21":"a","22":" ","23":"v","24":"a","25":"l","26":"i","27":"d","28":" ","29":"U","3":"n","30":"K","31":" ","32":"n","33":"u","34":"m","35":"b","36":"e","37":"r","38":",","39":" ","4":"e","40":"e","41":".","42":"g","43":".","44":",","45":" ","46":"+","47":"4","48":"4","49":"7","5":" ","50":"1","51":"2","52":"3","53":"4","54":"5","55":"6","56":"7","57":"8","58":"9","59":" ","6":"n","60":"o","61":"r","62":" ","63":"0","64":"7","65":"1","66":"2","67":"3","68":"4","69":"5","7":"u","70":"6","71":"7","72":"8","73":"9","8":"m","9":"b","level":"error","message":"user registration error","service":"auth-service","timestamp":"2025-08-28T01:51:34.052Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:51:48.662Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:51:48.667Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:51:48.667Z"}
+{"_message":"User validation failed","errors":{"phone":{"kind":"required","message":"Path `phone` is required.","name":"ValidatorError","path":"phone","properties":{"message":"Path `phone` is required.","path":"phone","type":"required"}}},"level":"error","message":"Registration error User validation failed: phone: Path `phone` is required.","service":"auth-service","stack":"ValidationError: User validation failed: phone: Path `phone` is required.\n    at model.Document.invalidate (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/document.js:3358:32)\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/document.js:3119:17\n    at /Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/node_modules/mongoose/lib/schemaType.js:1410:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-08-28T01:51:48.749Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:52:15.870Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:52:15.892Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:52:15.900Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:52:16.388Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:52:16.389Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:52:30.982Z"}
+{"level":"info","message":"request from /api/auth/register having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:52:30.984Z"}
+{"level":"info","message":"user hit the register controller","service":"auth-service","timestamp":"2025-08-28T01:52:30.985Z"}
+{"level":"info","message":"user created","service":"auth-service","timestamp":"2025-08-28T01:52:31.119Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:54:41.164Z"}
+{"level":"info","message":"request from /api/auth/login having a method of GET","service":"auth-service","timestamp":"2025-08-28T01:54:41.171Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:54:47.565Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:54:47.569Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:54:47.571Z"}
+{"0":"R","1":"e","10":"d","11":"y","12":" ","13":"c","14":"a","15":"n","16":"n","17":"o","18":"t","19":" ","2":"q","20":"b","21":"e","22":" ","23":"e","24":"m","25":"p","26":"t","27":"y","3":"u","4":"e","5":"s","6":"t","7":" ","8":"b","9":"o","level":"error","message":"user login error","service":"auth-service","timestamp":"2025-08-28T01:54:47.574Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:55:15.959Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:55:15.963Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:55:15.963Z"}
+{"0":"\"","1":"p","10":" ","11":"n","12":"o","13":"t","14":" ","15":"a","16":"l","17":"l","18":"o","19":"w","2":"h","20":"e","21":"d","3":"o","4":"n","5":"e","6":"\"","7":" ","8":"i","9":"s","level":"error","message":"user login error","service":"auth-service","timestamp":"2025-08-28T01:55:15.968Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:56:34.477Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:56:34.480Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:56:34.480Z"}
+{"level":"warn","message":"Attempted login with invalid email","service":"auth-service","timestamp":"2025-08-28T01:56:34.518Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:56:47.469Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:56:47.471Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:56:47.471Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:135:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T01:56:47.548Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:58:02.328Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:58:02.344Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:58:02.352Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:58:04.402Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:58:04.411Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:58:04.413Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:58:04.982Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:58:04.984Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:58:14.693Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:58:14.705Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:58:14.707Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T01:58:14.772Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:58:56.026Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:58:56.036Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:58:56.038Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:58:56.519Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:58:56.519Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T01:58:59.793Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T01:58:59.804Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T01:58:59.806Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T01:59:00.280Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T01:59:00.281Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T01:59:19.209Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T01:59:19.214Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T01:59:19.215Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T01:59:19.268Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:03:24.754Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:03:24.770Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:03:24.778Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:03:25.280Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:03:25.280Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:05:13.355Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:05:13.365Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:05:13.368Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:05:13.915Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:05:13.915Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:05:23.875Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:05:23.899Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:05:23.900Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:05:23.959Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:06:02.080Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:06:02.101Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:06:02.106Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:06:02.563Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:06:02.564Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:06:35.885Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:06:35.897Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:06:35.900Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:06:36.517Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:06:36.518Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:06:45.590Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:06:45.593Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:06:45.593Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:06:45.648Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:07:24.434Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:07:24.452Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:07:24.454Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:07:25.082Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:07:25.083Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:07:32.365Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:07:32.377Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:07:32.380Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:07:32.850Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:07:32.852Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:07:42.286Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:07:42.288Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:07:42.288Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:07:42.329Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:15:36.966Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:15:36.987Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:15:36.998Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:15:37.562Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:15:37.563Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:15:55.801Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:15:55.840Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:15:55.840Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:15:55.886Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:16:26.275Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:16:26.289Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:16:26.292Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:16:26.766Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:16:26.766Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:16:37.825Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:16:37.829Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:16:37.829Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:16:37.875Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:17:57.774Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:17:57.788Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:17:57.790Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:17:58.300Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:17:58.300Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:18:24.041Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:18:24.053Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:18:24.054Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:18:24.526Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:18:24.526Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:18:28.831Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:18:28.837Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:18:28.837Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:18:28.888Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:19:02.932Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:19:02.942Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:19:02.944Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:19:03.411Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:19:03.411Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:19:11.996Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:19:11.998Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:19:11.999Z"}
+{"code":"ERR_CRYPTO_INVALID_KEYLEN","level":"error","message":"Login error Invalid key length","service":"auth-service","stack":"RangeError: Invalid key length\n    at Cipheriv.createCipherBase (node:internal/crypto/cipher:117:19)\n    at Cipheriv.createCipherWithIV (node:internal/crypto/cipher:128:3)\n    at new Cipheriv (node:internal/crypto/cipher:218:3)\n    at Object.createCipheriv (node:crypto:141:10)\n    at encrypt (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/utils/encrypt.ts:26:27)\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:136:32)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:19:12.059Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:19:51.388Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:19:51.397Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:19:51.400Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:19:51.952Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:19:51.953Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:19:57.638Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:19:57.641Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:19:57.641Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:19:57.701Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:20:09.692Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:20:09.694Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:20:09.694Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:20:09.740Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:20:15.298Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:20:15.300Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:20:15.300Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:20:15.339Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:20:31.595Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:20:31.596Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:20:31.597Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:20:31.630Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:20:34.832Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:20:34.837Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:20:34.838Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:20:34.887Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:22:29.631Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:22:29.635Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:22:29.635Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:22:29.682Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:22:34.012Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:22:34.016Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:22:34.016Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:22:34.055Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:22:41.603Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:22:41.605Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:22:41.605Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:22:41.645Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:22:50.191Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:22:50.193Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:22:50.193Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:22:50.238Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:23:00.772Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:23:00.778Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:23:00.778Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:23:00.820Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:24:36.398Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:24:36.419Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:24:36.424Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:24:36.939Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:24:36.939Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:24:49.910Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:24:49.914Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:24:49.914Z"}
+{"level":"info","message":"attempt to create an email verification token","service":"auth-service","timestamp":"2025-08-28T02:24:49.960Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:25:11.293Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:25:11.305Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:25:11.320Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:25:11.775Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:25:11.775Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:25:25.609Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:25:25.612Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:25:25.613Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:25:25.731Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:25:43.878Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:25:43.879Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:25:43.880Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:25:43.975Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:25:51.114Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:25:51.116Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:25:51.116Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:25:51.211Z"}
+{"level":"error","message":"Login error User ip not found","service":"auth-service","stack":"Error: User ip not found\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:152:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:25:51.258Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:26:03.375Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:26:03.378Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:26:03.379Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:26:03.471Z"}
+{"level":"error","message":"Login error User ip not found","service":"auth-service","stack":"Error: User ip not found\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:152:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:26:03.509Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:26:38.872Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:26:38.882Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:26:38.883Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:26:39.430Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:26:39.430Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:26:47.411Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:26:47.413Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:26:47.413Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:26:47.509Z"}
+{"level":"error","message":"Login error User ip not found","service":"auth-service","stack":"Error: User ip not found\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:152:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:26:47.549Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:28:14.127Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:28:14.136Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:28:14.139Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:28:14.650Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:28:14.651Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:28:49.347Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:28:49.358Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:28:49.360Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:28:49.844Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:28:49.845Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:28:52.967Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:28:52.990Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:28:52.995Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:28:53.422Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:28:53.422Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:28:56.745Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:28:56.766Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:28:56.770Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:28:57.545Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:28:57.546Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:29:01.023Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:29:01.037Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:29:01.038Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:29:01.483Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:29:01.483Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:29:12.762Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:29:12.765Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:29:12.765Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:29:12.861Z"}
+{"level":"error","message":"Login error User ip not found","service":"auth-service","stack":"Error: User ip not found\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:152:17)","timestamp":"2025-08-28T02:29:12.864Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:30:42.908Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:30:42.932Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:30:42.934Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:30:51.359Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:30:51.377Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:30:51.380Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:30:51.833Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:30:51.833Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:31:01.418Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:31:01.421Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:31:01.422Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:31:01.520Z"}
+{"level":"warn","message":"User ip not found","service":"auth-service","timestamp":"2025-08-28T02:31:01.520Z"}
+{"level":"error","message":"Login error Failed to obtain user ip","service":"auth-service","stack":"Error: Failed to obtain user ip\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:161:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:31:01.627Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:31:46.726Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:31:46.738Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:31:46.739Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:31:47.213Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:31:47.214Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:31:57.515Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:31:57.526Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:31:57.529Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:31:57.994Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:31:57.994Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:32:14.655Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:32:14.670Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:32:14.672Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:32:15.290Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:32:15.291Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:32:23.686Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:32:23.704Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:32:23.706Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:32:24.154Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:32:24.155Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:32:29.751Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:32:29.755Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:32:29.756Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:32:29.861Z"}
+{"level":"warn","message":"User ip not found","service":"auth-service","timestamp":"2025-08-28T02:32:29.861Z"}
+{"level":"warn","message":"Failed to obtain user ip","service":"auth-service","timestamp":"2025-08-28T02:32:29.959Z"}
+{"level":"error","message":"Login error Account suspended, please check your mail to activate account.","service":"auth-service","stack":"Error: Account suspended, please check your mail to activate account.\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:184:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:32:29.969Z"}
+{"level":"warn","message":"Checking for rate limit","service":"auth-service","timestamp":"2025-08-28T02:32:39.486Z"}
+{"level":"info","message":"request from /api/auth/login having a method of POST","service":"auth-service","timestamp":"2025-08-28T02:32:39.487Z"}
+{"level":"info","message":"user hit the login controller","service":"auth-service","timestamp":"2025-08-28T02:32:39.487Z"}
+{"level":"error","message":"Attempt to login user with wrong credentials","service":"auth-service","timestamp":"2025-08-28T02:32:39.573Z"}
+{"level":"warn","message":"User ip not found","service":"auth-service","timestamp":"2025-08-28T02:32:39.573Z"}
+{"level":"warn","message":"Failed to obtain user ip","service":"auth-service","timestamp":"2025-08-28T02:32:39.645Z"}
+{"level":"error","message":"Login error Account suspended, please check your mail to activate account.","service":"auth-service","stack":"Error: Account suspended, please check your mail to activate account.\n    at loginUserController (/Users/home/Desktop/projects/ROSCA/rusca-microservices-server/authservices/src/controllers/userControllers.ts:184:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-08-28T02:32:39.646Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:34:02.508Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:34:02.525Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:34:02.539Z"}
+{"level":"info","message":"DB connection started","service":"auth-service","timestamp":"2025-08-28T02:34:05.732Z"}
+{"level":"info","message":"Successfully connected to Redis","service":"auth-service","timestamp":"2025-08-28T02:34:05.746Z"}
+{"level":"info","message":"Redis client is ready","service":"auth-service","timestamp":"2025-08-28T02:34:05.748Z"}
+{"level":"info","message":"MongoDb  connected successfully","service":"auth-service","timestamp":"2025-08-28T02:34:06.273Z"}
+{"level":"info","message":"App started at port 8000","service":"auth-service","timestamp":"2025-08-28T02:34:06.273Z"}

@@ -1,0 +1,31 @@
+ <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <h2 style="color: #cc0000;">⚠️ Suspicious Login Attempt Detected</h2>
+      
+      <p>Hello {{userName}},</p>
+
+      <p style="color: #333;">
+        We noticed a failed login attempt to your account from an unrecognized device or location:
+      </p>
+
+      <ul style="color: #555;">
+        <li><strong>Time:</strong> {{attemptTime}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+      </ul>
+
+      <p style="color: #333;">
+        If this was <strong>you</strong>, you can ignore this message. However, if you didn't try to sign in, we recommend:
+      </p>
+
+      <ul style="color: #333;">
+        <li>Changing your password immediately</li>
+        <li>Enabling two-factor authentication (2FA)</li>
+        <li>Reviewing your recent account activity</li>
+      </ul>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <a href="{{link}}" target="_blank" style="background-color: #cc0000; color: #ffffff; padding: 10px 20px; border-radius: 4px; text-decoration: none; cursor:pointer">Secure My Account</a>
+      </div>
+
+      <p style="color: #888;">If you need help, contact our support team.</p>
+      <p style="margin-top: 30px;">Thanks, <br><strong>{{companyName}} Security Team</strong></p>
+    </div>

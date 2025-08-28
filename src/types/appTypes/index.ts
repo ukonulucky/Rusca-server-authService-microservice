@@ -25,9 +25,10 @@ export type userSchemaType = {
 }
 
 export type userRegisterType = {
-    userName: string,
+    fullName: string,
     email: string,
     password: string,
+    phone: string
 
 }
 export type userLoginType = {

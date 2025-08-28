@@ -30,7 +30,7 @@ export const registerUserController: RequestHandler = async (req, res) => {
       });
       return;
     }
-    const { email, password, fullName, role } = req.body;
+    const { email, password, fullName, role, phone } = req.body;
 
     // Check if user already exists
     const existingUser = await UserModel.findOne({
@@ -49,7 +49,8 @@ export const registerUserController: RequestHandler = async (req, res) => {
       password,
       email,
       fullName,
-      role,
+        role,
+      phone
     });
     const newUser = await user.save();
     logger.info("user created");
@@ -116,10 +117,11 @@ export const loginUserController: RequestHandler = async (req, res) => {
       return;
     }
     const { email, password } = req.body;
-
+  console.log("this is the req.body", req.body)
     const user = await UserModel.findOne({
       email,
     });
+      console.log("login user", user)
     if (!user) {
       logger.warn("Attempted login with invalid email");
       return res.status(409).json({
@@ -129,25 +131,25 @@ export const loginUserController: RequestHandler = async (req, res) => {
     }
     // check if passoword match
 
-    const isPasswordCorrect = user.comparePassword(password);
+    const isPasswordCorrect = await user.comparePassword(password);
 
-    const encryptedId = encrypt(user._id.toString());
-
+    /* const encryptedId = encrypt(user._id.toString()); */
+  console.log("encrypted:", isPasswordCorrect)
     if (!isPasswordCorrect) {
       logger.error("Attempt to login user with wrong credentials");
       if (user.failedLoginCount === 2) {
         // check if user account is already suspended
-        if (user.status == "suspended") {
+          if (user.status !== "suspended") {
+            await UserModel.findOneAndUpdate(
+                { email },
+                { status: "suspended" },
+                { new: true } // returns the updated document
+              );
         }
 
-        await UserModel.findOneAndUpdate(
-          { email },
-          { status: "suspended" },
-          { new: true } // returns the updated document
-        );
-
+    
         if (!(req as requestIpType).clientIp) {
-          throw new Error("User ip not found");
+          logger.warn("User ip not found")
         }
         const {
           location: { regionName },
@@ -156,7 +158,7 @@ export const loginUserController: RequestHandler = async (req, res) => {
           status,
         } = await getUserIpFunc((req as requestIpType).clientIp);
         if (status !== "success") {
-          throw new Error("Failed to obtain user ip");
+          logger.warn("Failed to obtain user ip")
         }
 
         const option1 = {
@@ -169,13 +171,13 @@ export const loginUserController: RequestHandler = async (req, res) => {
           ],
           emailTemplate: "failedLoginTemplate",
           mailData: {
-            companyName: "Online bank assessment",
+            companyName: "Rusca bank",
             userName: user.fullName,
-            link: `${process.env.SERVER_URL}/api/v1/user/account/suspended/activate/${encryptedId}`,
+            link: `${process.env.SERVER_URL}/api/v1/user/account/suspended/activate/${user._id}`,
             verificationCode: undefined,
             attemptTime: time,
-            ipAddress: ipAddress,
-            location: regionName,
+            ipAddress: ipAddress || "not found",
+            location: regionName || "not found",
           },
         };
         await sendMailjetEmail(req, res, option1);

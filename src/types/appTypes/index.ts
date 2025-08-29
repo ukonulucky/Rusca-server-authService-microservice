@@ -11,17 +11,17 @@ export type userSchemaType = {
     password: string,
     password_reset_token: string | null,
     password_reset_expires: Date | null,
-    email_token: string | null,
+    email_token: number | null,
     email_token_expires: Date | null,
     email_verified: boolean,
     status:"suspended" | "active" | "pending",
     failedLoginCount: number,
-    role: "user" | " staff",
+    role: "user" | "admin",
     createPasswordResetCode: () => number
     comparePassword: (userPassword: string) => boolean,
-    isPasswordResetTokenValid: (token: number) => boolean,
+    isPasswordResetTokenValid: (token: string) => boolean,
     createEmailVerificationToken: () => number,
-    isEmailVerificationTokenValid: (eamilToken:number) => boolean
+    isEmailVerificationTokenValid: (emailToken:string) => boolean
 }
 
 export type userRegisterType = {
@@ -103,3 +103,14 @@ export interface IpAddressInfo {
 export interface  requestIpType extends Request { 
     clientIp:string
 }
+
+export interface IGetUserAuthInfoRequest extends Request{
+    params: { id: string}
+    user?: userSchemaType;
+   
+    cookies: {
+      token?: string;
+      [key: string]: any;
+    };
+
+  }

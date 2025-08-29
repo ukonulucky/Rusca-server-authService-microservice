@@ -82,7 +82,7 @@ app.get("/", (req, res) => {
     console.log("Root route accessed");
     res.send(`Server running on port ${PORT}`)
  })
-app.use("/api/auth", userRouter)
+app.use("/api", userRouter)
 
 // route for all other routes
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -90,7 +90,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         message:"route not found"
     })
 })
-
 
 
 /* handling all errors */

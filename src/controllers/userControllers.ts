@@ -15,6 +15,7 @@ import sendMailjetEmail from "../utils/sendEmail";
 import { encrypt } from "../utils/encrypt";
 import { getUserIpFunc } from "../utils/checkUserIp";
 import { requestIpType } from "../types/appTypes";
+import { decrypt } from "dotenv";
 
 // register user
 export const registerUserController: RequestHandler = async (req, res) => {
@@ -40,10 +41,11 @@ export const registerUserController: RequestHandler = async (req, res) => {
     if (existingUser) {
       logger.warn("Attempted registration with existing email");
       return res.status(409).json({
-        message: "User with this email or userName already exists",
+        message: "User with this email or user name already exists",
         status: false,
       });
     }
+
 
     const user = new UserModel({
       password,
@@ -61,7 +63,7 @@ export const registerUserController: RequestHandler = async (req, res) => {
 
     const verifyEmailEndpoint =
       process.env.SERVER_URL +
-      "/api/v1/user" +
+      "/api/auth" +
       "/emailVerify/" +
       newUser.email +
       "/" +
@@ -79,12 +81,12 @@ export const registerUserController: RequestHandler = async (req, res) => {
       ],
 
       mailData: {
-        companyName: "Rusca bank assessment",
+        companyName: "Rusca bank",
         userName: fullName,
         link: verifyEmailEndpoint,
       },
     };
-
+  newUser.save()
     await sendMailjetEmail(req, res, option);
 
     res.status(201).json({
@@ -117,7 +119,6 @@ export const loginUserController: RequestHandler = async (req, res) => {
       return;
     }
     const { email, password } = req.body;
-  console.log("this is the req.body", req.body)
     const user = await UserModel.findOne({
       email,
     });
@@ -134,7 +135,7 @@ export const loginUserController: RequestHandler = async (req, res) => {
     const isPasswordCorrect = await user.comparePassword(password);
 
     /* const encryptedId = encrypt(user._id.toString()); */
-  console.log("encrypted:", isPasswordCorrect)
+  console.log("isPasswordCorrect:", isPasswordCorrect)
     if (!isPasswordCorrect) {
       logger.error("Attempt to login user with wrong credentials");
       if (user.failedLoginCount === 2) {
@@ -173,17 +174,19 @@ export const loginUserController: RequestHandler = async (req, res) => {
           mailData: {
             companyName: "Rusca bank",
             userName: user.fullName,
-            link: `${process.env.SERVER_URL}/api/v1/user/account/suspended/activate/${user._id}`,
+            link: `${process.env.SERVER_URL}/api/auth/account/suspended/activate/${user._id}`,
             verificationCode: undefined,
             attemptTime: time,
             ipAddress: ipAddress || "not found",
             location: regionName || "not found",
           },
         };
-        await sendMailjetEmail(req, res, option1);
-        throw new Error(
-          "Account suspended, please check your mail to activate account."
-        );
+          await sendMailjetEmail(req, res, option1);
+        return  res.status(400).json({
+            message: "Account suspended, please check your mail to activate account.",
+            status: false,
+          });
+       
       }
       await UserModel.findOneAndUpdate(
         { email },
@@ -208,7 +211,7 @@ export const loginUserController: RequestHandler = async (req, res) => {
 
       const verifyEmailEndpoint =
         process.env.SERVER_URL +
-        "/api/v1/user" +
+        "/api/auth" +
         "/emailVerify/" +
         email +
         "/" +
@@ -234,7 +237,8 @@ export const loginUserController: RequestHandler = async (req, res) => {
         },
       };
 
-      await sendMailjetEmail(req, res, option);
+       sendMailjetEmail(req, res, option);
+        await user.save()
       return res.status(201).json({
         message: "Email verification sent",
         status: true,
@@ -255,7 +259,8 @@ export const loginUserController: RequestHandler = async (req, res) => {
     res.status(201).json({
       message: "User loggedIn successfuly",
       status: true,
-      user,
+        user,
+      token
     });
   } catch (error) {
     logger.error("Login error", error);
@@ -324,17 +329,8 @@ export const getSingleUserController: RequestHandler = async (req, res) => {
 export const getAllUsersController: RequestHandler = async (req, res) => {
   try {
     logger.info("User hits the getAllUsersRoutes");
-    const { id } = req.params;
-    const isIdVallid = isValidObjectId(id.toString());
-    if (!id || !isIdVallid) {
-      return res.status(404).json({
-        status: "false",
-        message: "User id not found",
-      });
-    }
-
-    const userFound = await UserModel.findById(id);
-    if (!userFound) {
+      const users = await UserModel.find({});
+    if (!users) {
       return res.status(404).json({
         status: "false",
         message: "User not found",
@@ -343,10 +339,10 @@ export const getAllUsersController: RequestHandler = async (req, res) => {
 
     return res.status(200).json({
       status: "success",
-      user: userFound,
+      users
     });
   } catch (error) {
-    logger.error("Login error", error);
+    logger.error("get all users", error);
     res.status(500).json({
       message: "Internal server error",
       status: false,
@@ -388,10 +384,6 @@ export const forgotPasswordController: RequestHandler = async (req, res) => {
     const { email: userEmail, fullName } = foundUser;
 
     await foundUser.save();
-    const message =
-      "Please use this OTP " +
-      code +
-      " to change your password. OTP expires in one hour";
 
     const option = {
       subject: "Forgot Password",
@@ -405,7 +397,7 @@ export const forgotPasswordController: RequestHandler = async (req, res) => {
       ],
 
       mailData: {
-        companyName: "online bank assessment",
+        companyName: "Rusca Bank",
         userName: fullName,
         link: "",
         verificationCode: code,
@@ -420,7 +412,6 @@ export const forgotPasswordController: RequestHandler = async (req, res) => {
     res.status(200).json({
       error: false,
       message: "Hi, a change password OTP has been sent to your mail",
-      meta: message,
     });
   } catch (error) {
     logger.error("Forgot password error", error);
@@ -437,7 +428,7 @@ export const changePasswordController: RequestHandler = async (req, res) => {
     const { error } = changePasswordValidation(req.body);
     if (error) {
       logger.error(
-        "user forgot password email error",
+        "user hit the change forgot password controller error",
         error.details[0].message
       );
       res.status(400).json({
@@ -458,10 +449,14 @@ export const changePasswordController: RequestHandler = async (req, res) => {
     }
     /* generate 5 digit code */
 
-    const isTokenValid = foundUser.isPasswordResetTokenValid(token);
-
-    if (!isTokenValid) {
-      throw new Error("Incorrect or expired OTP");
+    const isTokenValid = await foundUser.isPasswordResetTokenValid(token);
+  console.log("result", isTokenValid)
+      if (!isTokenValid) {
+        return  res.status(400).json({
+              message: "Incorrect or expired OTP",
+              status: false
+          })
+     
     }
 
     const { email: emailSaved, fullName } = foundUser;
@@ -483,7 +478,7 @@ export const changePasswordController: RequestHandler = async (req, res) => {
       ],
 
       mailData: {
-        companyName: "online bank assessment",
+        companyName: "Rusca bank",
         userName: fullName,
         link: "https://ukonuluckyportfolio.vercel.app/",
       },
@@ -508,10 +503,16 @@ export const changePasswordController: RequestHandler = async (req, res) => {
 export const deleteUserController: RequestHandler = async (req, res) => {
   try {
     logger.info("user hits the deleteController");
-    const { id } = req.params;
-    // check if email and password are sent
-    if (!id) {
-      throw new Error("Missing user Id");
+      const { id } = req.params;
+      
+      // check if id is a valid mongooseId
+
+      const isIdVallid = isValidObjectId(id.toString());
+    if (!id || !isIdVallid) {
+      return res.status(404).json({
+        status: "false",
+        message: "User id not found or invalid",
+      });
     }
 
     // delete user by Id
@@ -600,3 +601,123 @@ export const changePasswordOTPVerificationController: RequestHandler = async (
     });
   }
 };
+
+/// activate suspended account controller
+export const suspendedAccountActivationController: RequestHandler = async (
+    req,
+    res
+  ) => {
+    try {
+      logger.info("user hits the suspendedAccountActivationController");
+  
+         // validate user input
+         const { id } = req.params
+  
+        if (!id) { 
+          return  res.status(404).json({
+                message: "id not found",
+                status: false
+            })
+        }
+       
+      /*    const userId = decrypt(id) */
+       
+         const isIdVallid = isValidObjectId(id);  // check if userId is a valid mongoose id
+         if (!isIdVallid) {
+            res.status(404).json({
+             status: "failed",
+             message: "Invaild id or id not found",
+            });
+             return
+         }
+       
+         
+         const user = await UserModel.findByIdAndUpdate(
+           id, {
+             failedLoginCount: 0,
+             status: "active"
+         },
+           {
+             new: true
+           }
+         )
+       
+        if (!user) { 
+            res.status(404).json({
+                status: "false",
+                message: "User not found",
+               });
+                return
+        }
+         res.render("suspendedAccountActivation", {
+           userName: user.fullName,
+           companyName: "Rusca bank",
+           loginUrl:`${process.env.SERVER_URL}/api/auth/login`
+           
+         })
+         // send user an otp to verifiy user
+       
+       }
+     catch (error) {
+      logger.error("user account suspension error", error);
+      res.status(500).json({
+        message: "Internal server error",
+        status: false,
+      });
+    }
+};
+  
+// verify user email
+
+export const verifyUserEmailController: RequestHandler = async (
+    req,
+    res
+  ) => {
+    try {
+      logger.info("user hits the verify email controller");
+  
+      const { email, token } = req.params;
+
+      if (!token || !email) {
+        throw new Error("Missing credentials");
+      }
+      const foundUser = await UserModel.findOne({
+        email
+      });
+        console.log("found user:", foundUser)
+      if (!foundUser) {
+         res.status(401).json({
+          status: false,
+          message: "user not found",
+         });
+          return
+      }
+    
+      const isTokenValid = foundUser.isEmailVerificationTokenValid(token)
+        if (!isTokenValid) {
+          return  res.status(404).json({
+                message: "Invalid user token",
+                status: "true"
+            })  
+      
+      }
+      foundUser.email_verified = true;
+        foundUser.email_token = null;
+        foundUser.email_token_expires = null
+      
+      await foundUser.save();
+      /* const url = process.env.CLIENT_URL + "/emailVerified"; */
+      res.render("emailVerification")
+       
+       }
+     catch (error) {
+      logger.error("user account email verification error", error);
+      res.status(500).json({
+        message: "Internal server error",
+        status: false,
+      });
+    }
+};
+  
+
+

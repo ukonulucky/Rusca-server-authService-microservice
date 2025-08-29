@@ -31,19 +31,21 @@ const userSchema = new mongoose.Schema<userSchemaType>({
   },
   password_reset_token: {
     type: String,
-    select: false,
+    default: null
   },
   password_reset_expires: {
     type: Date,
-    select: false,
+    
+    default: null
   },
   email_token: {
     type: String,
-    select: false,
+    default: null
+ 
   },
   email_token_expires: {
     type: Date,
-    select: false,
+    default: null
   },
   email_verified: {
     type: Boolean,
@@ -51,7 +53,7 @@ const userSchema = new mongoose.Schema<userSchemaType>({
   },
   role: {
     type: String,
-    enum: ['user', 'staff'],
+    enum: ['user', 'admin'],
     default: 'user',
   },
   failedLoginCount: {
@@ -62,10 +64,7 @@ const userSchema = new mongoose.Schema<userSchemaType>({
     type: String,
     enum: ["suspended", "active","pending"],
    default:"pending"
-  },
-  
- 
-
+  }
 }, {
   timestamps: true,
 });
@@ -101,9 +100,11 @@ userSchema.methods.createPasswordResetCode = function () {
     // Generate a random number between 10000 and 99999
     const code = crypto.randomInt(10000, 100000); // 100000 is exclusive
   
-      // Set token to be valid for 1 hour
-      this.passwordResetToken = code;
-      this.passwordResetExpires = Date.now() + 3600000; // 1 hour from now
+  // Set token to be valid for 1 hour
+  const now = new Date()
+  const expirationTime = new Date(now.getTime() + 10 * 60 * 1000); // Add 1o minutes (10 minutes * 60 seconds * 1000 milliseconds)
+  this.password_reset_expires = expirationTime
+  this.password_reset_token = code.toString()
     
     return code;
   
@@ -111,18 +112,26 @@ userSchema.methods.createPasswordResetCode = function () {
   };
   
   // Method to check if the reset token is valid (not expired)
-  userSchema.methods.isPasswordResetTokenValid = function (token: number) {
+userSchema.methods.isPasswordResetTokenValid = function (token: string) {
+
+
+    console.log("token sent", token, typeof token,"password_reset_token:", this.password_reset_token, typeof this.password_reset_token)
     return (
-      this.passwordResetToken === token && this.passwordResetExpires > Date.now()
+      this.password_reset_token === token && this.password_reset_expires > Date.now()
     );
   };
   
   // Method to generate account verification token
-  userSchema.methods.createEmailVerificationToken = function () {
+userSchema.methods.createEmailVerificationToken = function () {
+    console.log("code ran in createEmailVerificationToken")
     const emailToken = crypto.randomBytes(20).toString('hex');
   
     // Set account verifcation token
-    this.accountVerificationToken = emailToken;
+    this.email_token = emailToken;
+    const now = new Date(); // Current time
+const expirationTime = new Date(now.getTime() + 10 * 60 * 1000); // Add 10 minutes (10 minutes * 60 seconds * 1000 milliseconds)
+  
+    this.email_token_expires = expirationTime 
   
   
     return emailToken;
@@ -130,9 +139,9 @@ userSchema.methods.createPasswordResetCode = function () {
   
   
   // Method to check if the email Verification token is valid 
-  userSchema.methods.isEmailVerificationTokenValid = function (emailToken: number) {
+  userSchema.methods.isEmailVerificationTokenValid = function (emailToken: string) {
     return (
-      this.accountVerificationToken = emailToken
+      this.email_token === emailToken && this.email_token_expires > Date.now()
     );
   };
   

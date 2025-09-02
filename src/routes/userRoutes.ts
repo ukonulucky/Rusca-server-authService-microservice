@@ -21,7 +21,7 @@ userRouter.get("/auth/emailVerify/:email/:token", verifyUserEmailController)
 userRouter.post("/auth/forgotpassword", forgotPasswordController)
 
 // update password
-userRouter.post("/auth/updatePassword", changePasswordController)
+userRouter.post("/auth/updatepassword", changePasswordController)
 
 // logout user
 userRouter.get("/auth/logOut", checkUserAuthMiddelware,logOutUserController)
@@ -32,12 +32,12 @@ userRouter.get("/auth/account/suspended/activate/:id", suspendedAccountActivatio
 // user auth routes ends //
 
 // get single user
-userRouter.get("/user/:id", checkUserAuthMiddelware, getSingleUserController)
+userRouter.get("/auth/user/:id", checkUserAuthMiddelware, getSingleUserController)
 
 // get all users
-userRouter.get("/users", checkUserAuthMiddelware, getAllUsersController)
+userRouter.get("/auth/users", checkUserAuthMiddelware, getAllUsersController)
 
 // delete single user
-userRouter.delete("/user/delete/:id",checkUserAuthMiddelware, deleteUserController)
+userRouter.delete("/auth/user/delete/:id",checkUserAuthMiddelware, deleteUserController)
 
 export default userRouter

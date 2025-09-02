@@ -119,6 +119,7 @@ export const loginUserController: RequestHandler = async (req, res) => {
       return;
     }
     const { email, password } = req.body;
+    console.log("loging body", req.body)
     const user = await UserModel.findOne({
       email,
     });
@@ -135,8 +136,8 @@ export const loginUserController: RequestHandler = async (req, res) => {
     const isPasswordCorrect = await user.comparePassword(password);
 
     /* const encryptedId = encrypt(user._id.toString()); */
-  console.log("isPasswordCorrect:", isPasswordCorrect)
-    if (!isPasswordCorrect) {
+  
+    if (!isPasswordCorrect || user.status === "suspended") {
       logger.error("Attempt to login user with wrong credentials");
       if (user.failedLoginCount === 2) {
         // check if user account is already suspended
@@ -147,8 +148,6 @@ export const loginUserController: RequestHandler = async (req, res) => {
                 { new: true } // returns the updated document
               );
         }
-
-    
         if (!(req as requestIpType).clientIp) {
           logger.warn("User ip not found")
         }
@@ -202,8 +201,11 @@ export const loginUserController: RequestHandler = async (req, res) => {
         status: false,
       });
     }
+
+  
+
     // check if user email is verified
-    const { email_verified, fullName } = user;
+    const { email_verified, fullName, status } = user;
     if (!email_verified) {
       // create an email verification token
       logger.info("attempt to create an email verification token");
@@ -240,10 +242,12 @@ export const loginUserController: RequestHandler = async (req, res) => {
        sendMailjetEmail(req, res, option);
         await user.save()
       return res.status(201).json({
-        message: "Email verification sent",
+        message: "Email not verified, An email verification link has been sent to your mail",
         status: true,
+        user
       });
     }
+
 
     const { _id } = user;
     // set jwt token for the user
@@ -461,7 +465,7 @@ export const changePasswordController: RequestHandler = async (req, res) => {
 
     const { email: emailSaved, fullName } = foundUser;
     foundUser.password = password;
-    foundUser.password_reset_expires = null;
+    foundUser.password_reset_token = null;
     foundUser.password_reset_expires = null;
 
     await foundUser.save();
@@ -526,7 +530,6 @@ export const deleteUserController: RequestHandler = async (req, res) => {
     }
 
     res.status(200).json({
-      error: false,
       status: true,
       message: "User deleted successfully",
     });

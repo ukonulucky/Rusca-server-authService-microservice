@@ -12,7 +12,8 @@ export const registerValidation = (data: userRegisterType) => {
     const schema = Joi.object({
         fullName: Joi.string().min(3).max(15).required(),
         email: Joi.string().email().required(),
-        password:Joi.string().min(5).max(15).required(),
+      password: Joi.string().min(5).max(15).required(),
+        role:Joi.string().valid('user', 'admin'),
         phone:Joi.string()
         .pattern(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/)
         .message("Phone number must be a valid UK number, e.g., +447123456789 or 07123456789")

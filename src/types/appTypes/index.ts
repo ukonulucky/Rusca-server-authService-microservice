@@ -1,5 +1,7 @@
 import mongoose from "mongoose"
 import { Request } from "express"
+export type MongooseIdType = mongoose.Types.ObjectId;
+
 export type userSchemaType = {
     _id?: MongooseIdType
     fullName: string,
@@ -28,7 +30,8 @@ export type userRegisterType = {
     fullName: string,
     email: string,
     password: string,
-    phone: string
+    phone: string,
+    role?: "user" | "admin"
 
 }
 export type userLoginType = {
@@ -52,7 +55,7 @@ export type changePasswordOTPVerificationType = {
     email: string,
     token: string
 }
-export type MongooseIdType = mongoose.Types.ObjectId;
+
 
 export type generateTokenType = {
     accessToken : string ,

@@ -49,6 +49,10 @@ export type changePasswordType = {
     token: string,
     password: string
 } 
+export type verifyPasswordTokenType = {
+    email: string,
+    token: string
+} 
 
 
 export type changePasswordOTPVerificationType = {

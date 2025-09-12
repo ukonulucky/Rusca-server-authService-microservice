@@ -7,6 +7,7 @@ import {
   forgotPasswordValidation,
   loginValidation,
   registerValidation,
+  verifyPasswordResetTokenValidation,
 } from "../utils/validate";
 
 import UserModel from "../model/userSchema";
@@ -15,8 +16,6 @@ import sendMailjetEmail from "../utils/sendEmail";
 import { encrypt } from "../utils/encrypt";
 import { getUserIpFunc } from "../utils/checkUserIp";
 import { requestIpType } from "../types/appTypes";
-import { decrypt } from "dotenv";
-
 // register user
 export const registerUserController: RequestHandler = async (req, res) => {
   logger.info("user hit the register controller");
@@ -503,6 +502,60 @@ export const changePasswordController: RequestHandler = async (req, res) => {
   }
 };
 
+// change password controller
+export const verifyPasswordResetTokenController: RequestHandler = async (req, res) => {
+  try {
+    const { error } = verifyPasswordResetTokenValidation(req.body);
+    if (error) {
+      logger.error(
+        "user hit the verify password reset token controller error",
+        error.details[0].message
+      );
+      res.status(400).json({
+        message: error.details[0].message,
+        status: false,
+      });
+      return;
+    }
+    const { email, token } = req.body;
+    const foundUser = await UserModel.findOne({
+      email,
+    });
+    if (!foundUser) {
+      return res.status(401).json({
+        status: false,
+        message: "user not found",
+      });
+    }
+    /* generate 5 digit code */
+
+    const isTokenValid = await foundUser.isPasswordResetTokenValid(token);
+  console.log("result", isTokenValid)
+      if (!isTokenValid) {
+        return  res.status(400).json({
+              message: "Incorrect or expired OTP",
+              status: false
+          })
+     
+    }
+
+    const { email: emailSaved, fullName } = foundUser;
+
+    res.status(200).json({
+      error: false,
+      status: true,
+      message: "Token verified",
+    });
+  } catch (error) {
+    logger.error("verify token change password error", error);
+    res.status(500).json({
+      message: "Internal server error",
+      status: false,
+    });
+  }
+};
+
+
 //delete password controller
 export const deleteUserController: RequestHandler = async (req, res) => {
   try {
@@ -696,7 +749,7 @@ export const verifyUserEmailController: RequestHandler = async (
           return
       }
     
-      const isTokenValid = foundUser.isEmailVerificationTokenValid(token)
+      const isTokenValid = await foundUser.isEmailVerificationTokenValid(token)
         if (!isTokenValid) {
           return  res.status(404).json({
                 message: "Invalid user token",

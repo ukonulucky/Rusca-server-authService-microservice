@@ -1,5 +1,5 @@
 import express from "express"
-import { changePasswordController, deleteUserController, forgotPasswordController, getAllUsersController, getSingleUserController, loginUserController, logOutUserController,registerUserController, suspendedAccountActivationController, verifyUserEmailController } from "../controllers/userControllers"
+import { changePasswordController, deleteUserController, forgotPasswordController, getAllUsersController, getSingleUserController, loginUserController, logOutUserController,registerUserController, suspendedAccountActivationController, verifyPasswordResetTokenController, verifyUserEmailController } from "../controllers/userControllers"
 import { checkUserAuthMiddelware } from "../middleware/checkUserAuth"
 import { checkAdminAuthMiddleware } from "../middleware/checkAdminAuth"
 
@@ -19,6 +19,10 @@ userRouter.get("/auth/emailVerify/:email/:token", verifyUserEmailController)
 
 // forgot password
 userRouter.post("/auth/forgotpassword", forgotPasswordController)
+
+// verify changePassword Token
+userRouter.post("/auth/verifyChangePasswordToken", verifyPasswordResetTokenController)
+
 
 // update password
 userRouter.post("/auth/updatepassword", changePasswordController)

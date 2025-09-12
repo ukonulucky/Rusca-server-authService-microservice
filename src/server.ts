@@ -79,7 +79,7 @@ app.use((req, res, next) => {
 //endpoints
 
 app.get("/", (req, res) => { 
-    console.log("Root route accessed");
+    console.log("Root route accessed now");
     res.send(`Server running on port ${PORT}`)
  })
 app.use("/api", userRouter)

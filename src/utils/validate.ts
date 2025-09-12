@@ -1,5 +1,5 @@
 import Joi from "joi"
-import { changePasswordOTPVerificationType, changePasswordType, userForgotPasswordType, userLoginType, userRegisterType } from "../types/appTypes"
+import { changePasswordOTPVerificationType, changePasswordType, userForgotPasswordType, userLoginType, userRegisterType, verifyPasswordTokenType } from "../types/appTypes"
 
 
 export const registerValidation = (data: userRegisterType) => { 
@@ -63,6 +63,19 @@ export const changePasswordValidation = (data: changePasswordType) => {
         email: Joi.string().email().required(),
         token: Joi.string().required(),
         password: Joi.string().required(),
+    })
+
+    return schema.validate(data)
+}
+export const verifyPasswordResetTokenValidation = (data: verifyPasswordTokenType) => { 
+    if (!data) {
+        return {
+          error: { details: [{ message: "Request body cannot be empty" }] }
+        };
+      }
+    const schema = Joi.object({
+        email: Joi.string().email().required(),
+        token: Joi.string().required()
     })
 
     return schema.validate(data)
